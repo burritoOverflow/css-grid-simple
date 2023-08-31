@@ -13,6 +13,7 @@
 }
 
 #grid-wrapper {
+  box-shadow: 10px 5px 5px gray;
   margin-top: 5em;
   width: 25%;
   border: 2px solid darkgray;
@@ -26,7 +27,7 @@
   border: 1px solid black;
   height: 100px;
   background: wheat;
-  transition: 333ms background-color;
+  transition: 333ms all;
 }
 
 #grid-wrapper > div > h2 {
@@ -36,5 +37,7 @@
 }
 
 #grid-wrapper > div:hover {
-  background: gray;
+  translate: 15% -12%;
+  background: gray !important;
+  color: gold;
 }

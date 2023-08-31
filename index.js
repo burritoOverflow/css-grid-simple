@@ -35,6 +35,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
       gridEl.innerHTML = genInnerHtml(randVal);
     });
+
+    if (idx % 2 === 0) {
+      gridEl.style.background = "gold";
+    }
   });
 
   setTotal(totalElement, total);
