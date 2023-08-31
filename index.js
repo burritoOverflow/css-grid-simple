@@ -8,14 +8,34 @@ function genInnerHtml(val) {
   `;
 }
 
+function setTotal(element, totalVal) {
+  element.innerText = `Total ${totalVal}`;
+}
+
 window.addEventListener("DOMContentLoaded", () => {
   const gridElements = document.querySelectorAll("#grid-wrapper > div");
+  const totalElement = document.getElementById("total-el");
+
+  let total = 0;
+
   gridElements.forEach((gridEl, idx) => {
     gridEl.id = `grid-idx-${idx}`;
-    gridEl.innerHTML = genInnerHtml(getRandomNumber());
+    const randVal = getRandomNumber();
+    total += randVal;
+    gridEl.innerHTML = genInnerHtml(randVal);
+
     gridEl.addEventListener("click", () => {
       console.info(`${gridEl.id} clicked`);
-      gridEl.innerHTML = genInnerHtml(getRandomNumber());
+      const curVal = parseInt(gridEl.innerText);
+
+      total -= curVal;
+      const randVal = getRandomNumber();
+      total += randVal;
+      setTotal(totalElement, total);
+
+      gridEl.innerHTML = genInnerHtml(randVal);
     });
   });
+
+  setTotal(totalElement, total);
 });

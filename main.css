@@ -8,6 +8,10 @@
   font-weight: bolder;
 }
 
+#total-el {
+  font-style: italic;
+}
+
 #grid-wrapper {
   margin-top: 5em;
   width: 25%;
@@ -15,7 +19,7 @@
   background-color: whitesmoke;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
 #grid-wrapper > div {
