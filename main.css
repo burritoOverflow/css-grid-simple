@@ -1,0 +1,30 @@
+#main-container {
+  display: grid;
+  place-items: center;
+}
+
+#main-heading {
+  text-align: center;
+  font-weight: bolder;
+}
+
+.grid-wrapper {
+  margin-top: 5em;
+  width: 25%;
+  border: 2px solid darkgray;
+  background-color: whitesmoke;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.grid-wrapper > div {
+  border: 1px solid black;
+  height: 100px;
+  background: wheat;
+  transition: 333ms background-color;
+}
+
+.grid-wrapper > div:hover {
+  background: gray;
+}
