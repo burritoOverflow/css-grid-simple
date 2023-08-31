@@ -36,6 +36,24 @@ window.addEventListener("DOMContentLoaded", () => {
       gridEl.innerHTML = genInnerHtml(randVal);
     });
 
+    gridEl.addEventListener("mouseover", () => {
+      // hide all others numbers
+      gridElements.forEach((el) => {
+        if (el.id !== gridEl.id) {
+          el.classList.add("hidden");
+        }
+      });
+    });
+
+    gridEl.addEventListener("mouseout", () => {
+      // unhide all others numbers
+      gridElements.forEach((el) => {
+        if (el.id !== gridEl.id) {
+          el.classList.remove("hidden");
+        }
+      });
+    });
+
     if (idx % 2 === 0) {
       gridEl.style.background = "gold";
     }
