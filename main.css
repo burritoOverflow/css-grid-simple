@@ -21,6 +21,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
+  animation: 1s slidein;
 }
 
 #grid-wrapper > div {
@@ -37,7 +38,18 @@
 }
 
 #grid-wrapper > div:hover {
+  box-shadow: 5px 3px 3px goldenrod;
   translate: 15% -12%;
   background: gray !important;
   color: gold;
+}
+
+@keyframes slidein {
+  from {
+    transform: translateY(-200%);
+  }
+
+  to {
+    transform: translateY(100%);
+  }
 }
